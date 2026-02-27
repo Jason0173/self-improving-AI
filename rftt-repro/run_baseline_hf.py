@@ -38,7 +38,7 @@ def main():
     run_id = conn.execute("SELECT last_insert_rowid()").fetchone()[0]
     conn.commit()
 
-    # 3) 取 GSM8K test 前 20 题
+    # 3) 取 GSM8K test 前 50 题
     rows = conn.execute("""
         SELECT p.id, p.question
         FROM problems p

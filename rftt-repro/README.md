@@ -44,7 +44,7 @@ This ensures full reproducibility and traceability.
 - Model: `Qwen/Qwen2.5-3B-Instruct`
 - Dataset: GSM8K (test split)
 - Decoding: greedy (temperature=0, do_sample=False)
-- Max tokens: 128
+- Max tokens: 256
 - Prompt: step-by-step reasoning + enforce `#### <number>` format
 
 ---

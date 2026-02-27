@@ -9,7 +9,7 @@ def main():
         conn.executescript(f.read())
     conn.commit()
     conn.close()
-    print("✅ Part2 migration applied")
+    print("✅ Part 2 migration applied")
 
 if __name__ == "__main__":
     main()
