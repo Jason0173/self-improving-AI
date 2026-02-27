@@ -20,6 +20,10 @@ def main():
     tok = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
 
     # 取第一条做检查
+    if not rows:
+        print("⚠️ no sft_samples found; nothing to validate")
+        return
+
     pid, prompt, completion = rows[0]
     text = prompt + "\n" + completion
 
