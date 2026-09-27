@@ -1,0 +1,19 @@
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Model checkpoints written by part2_sft_train.py
+checkpoints/
+
+# SQLite temp files (runs.sqlite itself is committed on purpose)
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

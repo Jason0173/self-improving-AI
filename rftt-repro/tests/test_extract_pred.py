@@ -3,6 +3,8 @@ import sys
 import types
 from pathlib import Path
 
+# Resolve scripts relative to this file so pytest works from any directory.
+PART2_DIR = Path(__file__).resolve().parent.parent / "part2_self_improvement"
 
 def _load_module(path: str, name: str):
     torch_stub = types.SimpleNamespace(float16="float16", float32="float32", cuda=types.SimpleNamespace(is_available=lambda: False))
@@ -11,7 +13,7 @@ def _load_module(path: str, name: str):
     sys.modules.setdefault("torch", torch_stub)
     sys.modules.setdefault("transformers", transformers_stub)
 
-    spec = importlib.util.spec_from_file_location(name, Path(path))
+    spec = importlib.util.spec_from_file_location(name, PART2_DIR / path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(module)

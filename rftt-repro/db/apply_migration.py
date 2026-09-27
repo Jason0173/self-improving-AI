@@ -1,7 +1,9 @@
 import sqlite3
+from pathlib import Path
 
 DB = "runs.sqlite"
-SQL = "migrate_part2.sql"
+# The migration file lives next to this script in db/.
+SQL = Path(__file__).resolve().parent / "migrate_part2.sql"
 
 def main():
     conn = sqlite3.connect(DB)

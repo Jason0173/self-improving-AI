@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS evaluations (
     run_id INTEGER NOT NULL,
     problem_id INTEGER NOT NULL,
     is_correct INTEGER NOT NULL,
+    extracted_answer TEXT,   -- written by eval_gsm8k.py and the part2 eval scripts
+    judge_details TEXT,
     FOREIGN KEY(run_id) REFERENCES runs(id),
     FOREIGN KEY(problem_id) REFERENCES problems(id)
 );
