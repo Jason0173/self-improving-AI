@@ -1,5 +1,7 @@
 # Self-Improving AI: Coursework
 
+[![tests](https://github.com/Jason0173/self-improving-AI/actions/workflows/tests.yml/badge.svg)](https://github.com/Jason0173/self-improving-AI/actions/workflows/tests.yml)
+
 Projects from the Self-Improving AI course at Northeastern University.
 
 | Folder | Topic | Contents |
